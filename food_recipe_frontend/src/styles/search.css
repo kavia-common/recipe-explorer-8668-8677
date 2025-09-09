@@ -1,0 +1,229 @@
+/* Screen: Search (35:432) */
+.search-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--color-ffffff);
+}
+
+/* Status Bar (44px high, top) */
+.status-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+  height: 44px;
+}
+.status-bar .time {
+  position: absolute;
+  left: 29.5px;
+  top: 14px;
+  font-family: var(--font-family-primary);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--color-303030);
+}
+
+/* Header group (arrow + title) */
+.header {
+  position: absolute;
+  left: 30px;
+  top: 54px;
+  width: 225px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.back-btn {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.title {
+  margin: 0;
+  font-family: var(--font-family-primary);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #181818;
+}
+
+/* Search row: search input (255x40) + filter button (40x40) */
+.search-row {
+  position: absolute;
+  left: 30px;
+  top: 98px;
+  width: 315px;
+  height: 40px;
+  display: flex;
+  gap: 10px;
+}
+.search-input {
+  position: relative;
+  width: 255px;
+  height: 40px;
+}
+.search-rect {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-10);
+  border: 1.3px solid var(--color-d9d9d9);
+  background: var(--color-ffffff);
+}
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 11px;
+  width: 18px;
+  height: 18px;
+  opacity: 1;
+}
+.search-control {
+  position: absolute;
+  left: 38px;
+  top: 10px;
+  width: calc(255px - 48px);
+  height: 20px;
+  border: 0;
+  outline: none;
+  font-family: var(--font-family-primary);
+  font-size: var(--typo-65-size);
+  font-weight: var(--typo-65-weight);
+  line-height: var(--typo-65-line);
+  color: var(--color-121212);
+}
+.search-control::placeholder {
+  color: var(--typo-65-color);
+}
+
+/* Filter button: 40x40 with style_11 */
+.filter-btn {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: var(--radius-10);
+  background: var(--color-129575);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Section Title: Recent Search */
+.section-title {
+  position: absolute;
+  left: 30px;
+  top: 158px;
+  margin: 0;
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--color-000000);
+}
+
+/* Cards container */
+.cards {
+  position: absolute;
+  left: 30px;
+  top: 202px;
+  width: 315px;
+  height: 645px;
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-auto-rows: 150px;
+  gap: 15px;
+}
+
+/* Card base */
+.card {
+  position: relative;
+  width: 150px;
+  height: 200px; /* 150 image + ~50 info area */
+  border-radius: var(--radius-10);
+  overflow: visible;
+  outline: none;
+}
+.card:focus-visible {
+  box-shadow: 0 0 0 2px rgba(18, 149, 117, 0.4);
+  border-radius: var(--radius-10);
+}
+.thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-10);
+  background: #eaeaea; /* placeholder */
+}
+
+/* Rating badge */
+.rating {
+  position: absolute;
+  right: 9px;
+  top: 10px;
+  height: 16px;
+  padding: 0 6px;
+  border-radius: 20px;
+  background: #ffe1b3;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.star {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+}
+.rating-text {
+  font-family: var(--font-family-primary);
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 12px;
+  color: var(--color-000000);
+}
+
+/* Food Title */
+.food-title {
+  position: absolute;
+  left: 10px;
+  top: 160px;
+  width: 130px;
+  margin: 0;
+  font-family: var(--font-family-primary);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16.5px;
+  color: var(--color-000000);
+}
+
+/* Creator */
+.creator {
+  position: absolute;
+  left: 10px;
+  top: 180px;
+  width: 130px;
+  margin: 0;
+  font-family: var(--font-family-primary);
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 12px;
+  color: #a9a9a9;
+}
+
+/* Home indicator (iOS) */
+.home-indicator {
+  position: absolute;
+  left: 120px;
+  bottom: 10px;
+  width: 135px;
+  height: 5px;
+  background: var(--color-121212);
+  border-radius: var(--radius-100);
+}

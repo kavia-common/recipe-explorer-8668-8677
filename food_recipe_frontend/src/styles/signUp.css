@@ -1,0 +1,266 @@
+/* Screen: Sign up (30:403) */
+.screen-root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--color-ffffff);
+}
+
+/* Status Bar placeholder (top) */
+.status-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+  height: 44px;
+}
+
+/* Title group: Create an account + subtitle */
+.title-group {
+  position: absolute;
+  left: 30px;
+  top: 54px;
+  width: 195px;
+  height: 69px;
+}
+
+.title-create {
+  margin: 0;
+  font-family: var(--font-family-primary);
+  font-size: var(--typo-68-size);
+  font-weight: var(--typo-68-weight);
+  line-height: var(--typo-68-line);
+  color: var(--color-000000);
+}
+
+.title-sub {
+  margin: 3px 0 0 0;
+  font-family: var(--font-family-primary);
+  font-size: var(--typo-69-size);
+  font-weight: var(--typo-69-weight);
+  line-height: var(--typo-69-line);
+  color: var(--typo-69-color);
+}
+
+/* Input field component - base */
+.input-field {
+  position: absolute;
+  width: 315px;
+  height: 81px;
+}
+
+.input-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-family-primary);
+  font-size: var(--typo-66-size);
+  font-weight: var(--typo-66-weight);
+  line-height: var(--typo-66-line);
+  color: var(--typo-66-color);
+}
+
+.input-rect {
+  position: absolute;
+  left: 0;
+  top: 26px;
+  width: 315px;
+  height: 55px;
+  border-radius: var(--radius-10);
+  border: var(--border-1-5) solid var(--border-color-default);
+  background: var(--color-ffffff);
+}
+
+.input-control {
+  position: absolute;
+  left: 20px;
+  top: 45px;
+  width: calc(315px - 40px);
+  height: 24px;
+  border: none;
+  outline: none;
+  font-family: var(--font-family-primary);
+  font-size: var(--typo-65-size);
+  font-weight: var(--typo-65-weight);
+  line-height: var(--typo-65-line);
+  color: var(--color-121212);
+}
+
+.input-control::placeholder {
+  color: var(--typo-65-color);
+}
+
+/* Individual input positions */
+.input-name { left: 30px; top: 143px; }
+.input-email { left: 30px; top: 244px; }
+.input-password { left: 30px; top: 345px; }
+.input-confirm { left: 30px; top: 446px; }
+
+/* Terms & Condition group */
+.terms-group {
+  position: absolute;
+  left: 40px;
+  top: 547px;
+  width: 164px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.terms-checkbox {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  border: 1px solid var(--color-ff9c00);
+  border-radius: 5px;
+  background: var(--color-ffffff);
+  cursor: pointer;
+  position: relative;
+}
+
+.terms-checkbox[aria-checked="true"] {
+  background: var(--color-ff9c00);
+}
+
+.terms-checkbox[aria-checked="true"]::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 7px;
+  height: 12px;
+  border: 2px solid var(--color-ffffff);
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+}
+
+.terms-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--typo-62-size);
+  font-weight: var(--typo-62-weight);
+  line-height: var(--typo-62-line);
+  color: var(--typo-62-color);
+}
+
+/* Big Primary Button */
+.primary-btn {
+  position: absolute;
+  left: 30px;
+  top: 590px;
+  width: 315px;
+  height: 60px;
+  border-radius: var(--radius-10);
+  background: var(--color-129575);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.primary-btn .label {
+  font-family: var(--font-family-primary);
+  font-size: var(--typo-58-size);
+  font-weight: var(--typo-58-weight);
+  line-height: var(--typo-58-line);
+  color: var(--typo-58-color);
+}
+
+.primary-btn .icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+}
+
+/* Divider line with text */
+.divider {
+  position: absolute;
+  left: 90px;
+  top: 664px;
+  width: 195px;
+  height: 17px;
+}
+
+.divider-line-left,
+.divider-line-right {
+  position: absolute;
+  top: 9px;
+  width: 50px;
+  height: 0;
+  border-top: var(--border-1) solid var(--color-d9d9d9);
+}
+
+.divider-line-left { left: 0; }
+.divider-line-right { right: 0; }
+
+.divider-text {
+  position: absolute;
+  left: 57px;
+  top: 0;
+  width: 81px;
+  height: 17px;
+  font-family: var(--font-family-primary);
+  font-size: var(--typo-64-size);
+  font-weight: var(--typo-64-weight);
+  line-height: var(--typo-64-line);
+  color: var(--typo-64-color);
+  text-align: center;
+}
+
+/* Social buttons */
+.social-btn {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-10);
+  background: var(--color-ffffff);
+  box-shadow: var(--shadow-0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-google {
+  left: 131px;
+  top: 701px;
+}
+
+.social-facebook {
+  left: 200px;
+  top: 701px;
+}
+
+.google-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+/* Footer small text */
+.footer-cta {
+  position: absolute;
+  left: 113px;
+  top: 765px;
+  width: 150px;
+  height: 17px;
+  margin: 0;
+  font-family: var(--font-family-primary);
+  font-size: var(--typo-63-size);
+  font-weight: var(--typo-63-weight);
+  line-height: var(--typo-63-line);
+  color: var(--typo-63-color);
+}
+
+/* Home indicator (iOS) */
+.home-indicator {
+  position: absolute;
+  left: 120px;
+  top: 739px;
+  width: 135px;
+  height: 5px;
+  background: var(--color-121212);
+  border-radius: var(--radius-100);
+}

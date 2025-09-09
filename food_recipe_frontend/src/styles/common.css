@@ -1,0 +1,131 @@
+:root {
+  /* Colors from design system */
+  --color-ffffff: #ffffff;
+  --color-000000: #000000;
+  --color-121212: #121212;
+  --color-129575: #129575;
+  --color-d9d9d9: #d9d9d9;
+  --color-ff9c00: #ff9c00;
+  --color-ffc107: #ffc107;
+  --color-ff3d00: #ff3d00;
+  --color-4caf50: #4caf50;
+  --color-1976d2: #1976d2;
+  --color-303030: #303030;
+  --color-035b81: #035b81;
+
+  /* Typography tokens (subset used) */
+  --font-family-primary: "Poppins", Arial, Helvetica, sans-serif;
+
+  --typo-60-size: 30px;
+  --typo-60-weight: 600;
+  --typo-60-line: 45px;
+  --typo-60-color: var(--color-000000);
+
+  --typo-61-size: 20px;
+  --typo-61-weight: 400;
+  --typo-61-line: 30px;
+  --typo-61-color: var(--color-121212);
+
+  --typo-62-size: 11px;
+  --typo-62-weight: 400;
+  --typo-62-line: 16.5px;
+  --typo-62-color: var(--color-ff9c00);
+
+  --typo-63-size: 11px;
+  --typo-63-weight: 500;
+  --typo-63-line: 16.5px;
+  --typo-63-color: var(--color-000000);
+
+  --typo-64-size: 11px;
+  --typo-64-weight: 500;
+  --typo-64-line: 16.5px;
+  --typo-64-color: var(--color-d9d9d9);
+
+  --typo-65-size: 11px;
+  --typo-65-weight: 400;
+  --typo-65-line: 16.5px;
+  --typo-65-color: var(--color-d9d9d9);
+
+  --typo-66-size: 14px;
+  --typo-66-weight: 400;
+  --typo-66-line: 21px;
+  --typo-66-color: var(--color-121212);
+
+  --typo-68-size: 22px;
+  --typo-68-weight: 600;
+  --typo-68-line: 33px;
+
+  --typo-69-size: 12px;
+  --typo-69-weight: 400;
+  --typo-69-line: 18px;
+  --typo-69-color: var(--color-121212);
+
+  --typo-58-size: 16px;
+  --typo-58-weight: 600;
+  --typo-58-line: 24px;
+  --typo-58-color: var(--color-ffffff);
+
+  /* Radii and borders from used styles */
+  --radius-10: 10px;
+  --radius-100: 100px;
+
+  --border-1: 1px;
+  --border-1-5: 1.5px;
+  --border-color-default: var(--color-d9d9d9);
+
+  /* Shadows */
+  --shadow-0: 0 0 5px 3px #696969;
+}
+
+/* Global reset and helpers */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ffffff);
+  color: var(--color-121212);
+  font-family: var(--font-family-primary);
+}
+
+/* Mobile frame wrapper to mimic 375 x 812 artboards */
+.mobile-frame {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  background: var(--color-ffffff);
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+/* Simple top nav for routing preview */
+.topnav {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color-default);
+}
+
+.topnav a {
+  text-decoration: none;
+  color: #129575;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.topnav a.active {
+  text-decoration: underline;
+}
+
+.screen-container {
+  padding: 8px 0;
+}
